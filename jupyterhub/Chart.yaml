@@ -1,5 +1,5 @@
-name: jupyterhub-ppc64le
-version: v0.7-184dc1b
+name: jupyterhub
+version: v0.7-908d792
 appVersion: v0.8.1
 description: Multi-user Jupyter installation
 home: https://z2jh.jupyter.org
