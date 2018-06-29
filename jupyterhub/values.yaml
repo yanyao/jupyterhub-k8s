@@ -25,7 +25,7 @@ hub:
     url:
   labels: {}
   annotations:
-    prometheus.io/scrape: "true"
+    prometheus.io/scrape: 'true'
     prometheus.io/path: /hub/metrics
   extraConfig: {}
   extraConfigMap: {}
@@ -34,8 +34,8 @@ hub:
   extraVolumes: []
   extraVolumeMounts: []
   image:
-    name: jupyterhub/k8s-hub
-    tag: generated-by-chartpress
+    name: yanyao/jupyterhub.ppc64le-hub
+    tag: 184dc1b
   resources:
     requests:
       cpu: 200m
@@ -67,7 +67,7 @@ proxy:
       https:
   chp:
     image:
-      name: jupyterhub/configurable-http-proxy
+      name: yanyao/jupyterhub.configurable-http-proxy-ppc64le
       tag: 3.0.0
       pullPolicy: IfNotPresent
     resources:
@@ -129,8 +129,8 @@ auth:
 singleuser:
   networkTools:
     image:
-      name: jupyterhub/k8s-network-tools
-      tag: generated-by-chartpress
+      name: yanyao/jupyterhub.ppc64le-network-tools
+      tag: 184dc1b
   cloudMetadata:
     enabled: false
     ip: 169.254.169.254
@@ -186,14 +186,14 @@ prePuller:
     enabled: true
     extraEnv: {}
     image:
-      name: jupyterhub/k8s-image-awaiter
-      tag: generated-by-chartpress
+      name: yanyao/jupyterhub.ppc64le-image-awaiter
+      tag: 184dc1b
   continuous:
     enabled: false
   extraImages: []
   pause:
     image:
-      name: gcr.io/google_containers/pause
+      name: gcr.io/google_containers/pause-ppc64le
       tag: '3.0'
 
 
@@ -213,8 +213,8 @@ cull:
   maxAge: 0
   podCuller:
     image:
-      name: jupyterhub/k8s-pod-culler
-      tag: generated-by-chartpress
+      name: yanyao/jupyterhub.ppc64le-pod-culler
+      tag: 184dc1b
 
 
 debug:

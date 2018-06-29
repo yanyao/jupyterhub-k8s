@@ -1,8 +1,8 @@
 charts:
   - name: jupyterhub
-    imagePrefix: yanyao/jupyterhub.k8s-
+    imagePrefix: yanyao/jupyterhub.ppc64le-
     repo:
-      git: yanyao/helm-chart
+      git: yanyao/hub-helm-charts
       published: https://yanyao.github.io/helm-chart
 
     images:
