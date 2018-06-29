@@ -10,6 +10,8 @@ RUN apt-get update && \
       libcurl4-openssl-dev \
       libssl-dev \
       build-essential \
+      libpq-dev \
+      libffi-dev \
       && \
     apt-get purge && apt-get clean
 
